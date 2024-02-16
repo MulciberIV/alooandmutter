@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden !important;
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+
+.container {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#blob {
+  background-color: white;
+  height: 30vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+section {
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  z-index: 3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+}
+
+.section-container {
+  position: absolute;
+  z-index: 3;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  filter: blur(8rem);
+  backdrop-filter: blur(1px);
+}
+
+/* PARALLAX BASED CSS */
+
+.parallax {
+  pointer-events: none;
+  transition: all 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+}
+
+.bg-img {
+  z-index: 2;
+  position: absolute;
+  width: 3000px;
+  top: calc(50% - 300px);
+  left: calc(50% + 10px);
+  animation: fadeIn 8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fog-7 {
+  z-index: 3;
+  position: absolute;
+  width: 1900px;
+  top: calc(50% - 100px);
+  left: calc(50% + 300px);
+}
+
+.mountain-10 {
+  z-index: 4;
+  position: absolute;
+  width: 892px;
+  top: calc(50% + 69px);
+  left: calc(50% + 230px);
+}
+
+.fog-6 {
+  z-index: 4;
+  position: absolute;
+  top: calc(50% + 150px);
+  left: calc(50% + 10px);
+}
+
+.mountain-9 {
+  z-index: 5;
+  position: absolute;
+  width: 470px;
+  top: calc(50% + 170px);
+  left: calc(50% - 510px);
+}
+
+.mountain-8 {
+  z-index: 6;
+  position: absolute;
+  width: 910px;
+  top: calc(50% + 86px);
+  left: calc(50% - 202px);
+}
+
+.fog-5 {
+  z-index: 7;
+  position: absolute;
+  width: 450px;
+  top: calc(50% + 160px);
+  left: calc(50% + 20px);
+}
+
+.mountain-7 {
+  z-index: 8;
+  position: absolute;
+  width: 738px;
+  top: calc(50% + 150px);
+  left: calc(50% + 305px);
+}
+
+.text {
+  z-index: 9;
+  position: absolute;
+  top: calc(50% - 175px);
+  left: 50%;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.text h2 {
+  font-weight: 100;
+  font-size: 6.5rem;
+}
+
+.text h1 {
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 0.88;
+}
+
+.mountain-6 {
+  z-index: 10;
+  position: absolute;
+  width: 550px;
+  top: calc(50% + 140px);
+  left: calc(50% + 690px);
+}
+
+.fog-4 {
+  z-index: 11;
+  position: absolute;
+  width: 790px;
+  top: calc(50% + 223px);
+  left: calc(50% - 60px);
+}
+
+.mountain-5 {
+  z-index: 12;
+  position: absolute;
+  width: 725px;
+  top: calc(50% + 250px);
+  left: calc(50% + 130px);
+}
+
+.fog-3 {
+  z-index: 13;
+  position: absolute;
+  width: 1600px;
+  top: calc(50% + 110px);
+  left: calc(50% - 15px);
+}
+
+.mountain-4 {
+  z-index: 14;
+  position: absolute;
+  width: 780px;
+  top: calc(50% + 230px);
+  left: calc(50% - 381px);
+}
+
+.mountain-3 {
+  z-index: 15;
+  position: absolute;
+  width: 538px;
+  top: calc(50% + 150px);
+  left: calc(50% + 905px);
+}
+
+.fog-2 {
+  z-index: 16;
+  position: absolute;
+  width: 538px;
+  top: calc(50% + 150px);
+  left: calc(50% + 305px);
+}
+
+.mountain-2 {
+  z-index: 17;
+  position: absolute;
+  width: 838px;
+  top: calc(50% + 250px);
+  left: calc(50% + 450px);
+}
+
+.mountain-1 {
+  z-index: 18;
+  position: absolute;
+  width: 530px;
+  top: calc(50% + 25px);
+  left: calc(50% - 810px);
+}
+
+.sun-rays {
+  z-index: 19;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 595px;
+  pointer-events: none;
+}
+
+.black-shadow {
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.fog-1 {
+  z-index: 21;
+  position: absolute;
+  width: 115vw;
+  top: calc(100% - 355px);
+  left: 50%;
+}
+
+.vignette {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(0, 0, 0, 0.7)
+  );
+  pointer-events: none;
+  animation: fadeIn 6s ease-in;
+}
+
+@media (max-width: 1100px) {
+  .text h1 {
+    font-size: 5.8rem;
+  }
+}
+
+@media (max-width: 725px) {
+  .text h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 528px) {
+  .text h1 {
+    font-size: 3.3rem;
+  }
+}
+
+/* IMAGE TRACK */
+
+#memory-1,
+#memory-2,
+#memory-3,
+#memory-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.description {
+  height: 10%;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-div {
+  height: 80%;
+}
+
+.plot {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 25px;
+  text-align: center;
+
+  padding: 30px;
+  width: 600px;
+  opacity: 0.6;
+  transform: translate(-10%, -50%);
+}
+
+.plot span {
+  display: block;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+@keyframes shimmer {
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+.plot-2 {
+  padding: 120px;
+  text-align: center;
+  font-size: 28px;
+  opacity: 0.5;
+
+  font-family: "Lato", sans-serif;
+}
+
+.plot-2 span {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.honey {
+  display: contents;
+  color: red;
+  font-weight: 900;
+  transition: all 1s ease-in;
+}
+
+.honey:hover {
+  color: white;
+}
+
+#image-track1,
+#image-track2,
+#image-track3,
+#image-track4 {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  user-select: none;
+}
+
+#image-track1 > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+#image-track2 > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+#image-track3 > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+#image-track4 > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+/* TEXT ANIMATION */
